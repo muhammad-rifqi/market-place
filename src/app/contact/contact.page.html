@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title>{{this.row.title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="block">
+    <ion-item>
+      <div>
+        <h3 align="center"> {{ this.row.title }}</h3>
+        <img src="{{this.row.foto}}">
+        <p> Harga : Rp. {{ this.row.price | currency }}</p>
+        <p> {{ this.row.description }}</p>
+      </div>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

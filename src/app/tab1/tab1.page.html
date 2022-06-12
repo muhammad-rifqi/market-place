@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title>
+      Market Place
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card *ngFor="let data of row; let i = index">
+  <ion-card-header>
+    <ion-card-subtitle>Produk {{i + 1 }} </ion-card-subtitle>
+    <ion-card-title>{{data.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <img class = "full-image" src = "{{data.foto}}">
+    {{data.description}}
+  </ion-card-content>
+  <p><ion-button [routerLink]="['/detail', + data.id]" class="new-background-color">Go to Detail</ion-button></p>
+</ion-card>
+
+
+</ion-content>
